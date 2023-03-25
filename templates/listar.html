@@ -1,0 +1,12 @@
+<h1 style="text-align: center">Transportar</h1>
+    {% if content|length < 1 %}
+    <h4 style="text-align: center">No hay items de transporte</h4>
+    {% else %}
+    <table>
+        {% for con in content %}
+            <tr>
+                <td>{{ con }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}

@@ -1,24 +1,40 @@
-# README
+# FlaskIntroduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo has been updated to work with `Python v3.8` and up.
 
-Things you may want to cover:
+## How To Run
+1. Install `virtualenv`:
+```
+$ pip install virtualenv
+```
 
-* Ruby version
+2. Open a terminal in the project root directory and run:
+```
+$ virtualenv env
+```
 
-* System dependencies
+3. Then run the command:
+```
+$ .\env\Scripts\activate
+```
 
-* Configuration
+4. Then install the dependencies:
+```
+$ (env) pip install -r requirements.txt
+```
 
-* Database creation
+5. Finally start the web server:
+```
+$ (env) python app.py
+```
 
-* Database initialization
+This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
 
-* How to run the test suite
+```python
+if __name__ == "__main__":
+    app.run(debug=True, port=<desired port>)
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributing
 
-* Deployment instructions
-
-* ...
+Since this is a repository for a tutorial, the code should remain the same as the code that was shown in the tutorial. Any pull requests that don't address security flaws or fixes for language updates will be automatically closed. Style changes, adding libraries, etc are not valid changes for submitting a pull request.
